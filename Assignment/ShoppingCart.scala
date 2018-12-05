@@ -8,16 +8,16 @@ import scalafx.collections.ObservableBuffer
 class ShoppingCart(user: User) extends ArcanaList {
   var totalPrice: Double = 0
 
-  // Method to update the total price of the shopping cart
+  // Method to update the total price of the shopping cart.
   def updateTotalPrice(isAdd: Boolean, arcanaPrice: Double): Unit = {
     if(isAdd) totalPrice = totalPrice + arcanaPrice
     else totalPrice = totalPrice - arcanaPrice
-  } // End updateTotalPrice
+  } // End updateTotalPrice.
 
-  // Method to reset the total price of Arcanas in the user's shopping cart
+  // Method to reset the total price of Arcanas in the user's shopping cart.
   def resetTotalPrice(): Unit = {
     totalPrice = 0
-  } // End resetTotalPrice
+  } // End resetTotalPrice.
 
   // Method to add Arcana into shopping cart.
   def addArcana(itemObj: Arcana): Unit = {
@@ -29,16 +29,15 @@ class ShoppingCart(user: User) extends ArcanaList {
     arcanaList -= itemObj
   }
 
-  // Method to clear the Arcanas in the shopping cart
+  // Method to clear the Arcanas in the shopping cart.
   def clearShoppingCart(): Unit = {
     for (x <- Store.arcanaList) {
       x.arcanaShoppingCartQuantity = 1
     }
     arcanaList = ObservableBuffer[Arcana]()
-  } // End clearShoppingCart method
+  } // End clearShoppingCart method.
 
-  /* Does not require a parameter with type Shopping Cart because
-  // this method is within ShoppingCart class */
+  // Method for user to checkout.
   def checkOut(user: User): Boolean = {
     // If user balance is greater or equal to the user's shopping cart total price, perform the following operations.
     if (user.userBalance >= totalPrice) {
@@ -106,4 +105,4 @@ class ShoppingCart(user: User) extends ArcanaList {
       }
     } // End if(b).
   } // End addInventoryArcanaQuantity method.
-} // End class Shopping Cart
+} // End class Shopping Cart.
