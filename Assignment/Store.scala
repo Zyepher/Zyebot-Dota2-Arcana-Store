@@ -1,6 +1,6 @@
 package Assignment
 
-// A singleton object which is responsible for the list of Arcanas available Store
+// A singleton object which is responsible for the list of Arcanas available in the Store
 object Store extends ArcanaList {
   def enableArcanaStoreAddToCartButtons(): Unit = {
     /* Loop through all available Arcanas by using Store.arcanaList since the store has every Arcanas available.
