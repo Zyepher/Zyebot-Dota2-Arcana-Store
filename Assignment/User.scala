@@ -11,5 +11,5 @@ class User() extends ArcanaList {
   // Method to deduct the user's balance when they checkout.
   def deductAmount(amount: Double): Unit = {
     userBalance = userBalance - amount
-  }//End deductAmount method.
+  } //End deductAmount method.
 } // End class User.
