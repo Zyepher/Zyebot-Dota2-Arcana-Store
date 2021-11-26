@@ -6,7 +6,7 @@ class User() extends ArcanaList {
   // Method to add the user's balance which takes amount as parameter.
   def userAddFund(amount: Double): Unit = {
     userBalance = userBalance + amount
-  } //End userAddFund method
+  } // End userAddFund method
 
   def deductAmount(amount: Double): Unit = {
     userBalance = userBalance - amount
